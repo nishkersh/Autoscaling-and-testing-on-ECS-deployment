@@ -122,11 +122,21 @@ aws application-autoscaling put-scaling-policy \
 
 - **Load Testing On ECS Deployment** It's The last step that I performed in the lab 
  > In this I used **Siege command** to create cuncurrent users which will try to hit my frontend application service .Because of which it will lead to increase in the % of my CPU utilization and as a result When CPU utilization reaches 20% it will trigger autoscaling in my Frontend Services.
-> 
 
- - **After Completion of our lab The architecture will look like this**
+>![](/Lab1/Screenshot%20from%202023-08-19%2018-45-15.png)
+
+- **Graph Of CPU utilization and Memory Utilization**
+---------
+>![](/Lab1/Screenshot%20from%202023-08-19%2018-55-10.png)
+>
+-------------
+
+**After Completion of our lab The architecture will look like this**
+-------
+![](/Lab1/Screenshot%20from%202023-08-19%2017-57-16.png)
 
 
+ 
 
 
 
