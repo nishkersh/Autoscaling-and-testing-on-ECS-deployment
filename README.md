@@ -36,7 +36,13 @@ Therefore through this lab I will be explaining how to use Application Auto Scal
 #### Here I will be discussing the steps that I performed in the lab after logging into the AWS console and configuring the Open code Editor with my Access Key ID, Secret Access Key, and default region. 
 - **Scaling ECS services using metric target tracking**
 
-In this lab step, I inspected the application in the Amazon ECS console
+In this lab step, I inspected the application in the Amazon ECS console.I observed the Health and Matrics tab which showed me the graph of CPU utilization and Metric Utilization and in Configuration tab
+I observed that no autoscaling  configuration has been done yet in frontend services 
+
+![](/Lab1/Screenshot%20from%202023-08-21%2002-38-16.png)
+
+-----
+![](/Lab1/Screenshot%20from%202023-08-21%2002-40-21.png)
 
 -----
 
