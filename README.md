@@ -52,18 +52,30 @@ I observed that no autoscaling  configuration has been done yet in frontend serv
  `aws cloudwatch list-metrics \`
  >`   --namespace "AWS/ECS" \`
  `   --dimensions "Name=ServiceName,Value=frontend-service-fxgjjv"`
-`
 
+> THEN i WILL GOT A OUTPUT LIKE THIS :
+---------
+![](/Lab1/Screenshot%20from%202023-08-21%2002-19-41.png)
+
+--------
 2. I created a service-linked role through CLI and and got a response,which is a JSON representation of the newly created service-linked role:
 `aws iam create-service-linked-role --aws-service-name ecs.application-autoscaling.amazonaws.com`
 
+> THEN i WILL GOT A OUTPUT LIKE THIS :
+---------
+![](/Lab1/Screenshot%20from%202023-08-21%2002-47-37.png)
+
+---------
 3. Then registered a service as a scalable target for Application Auto Scaling
-  `aws application-autoscaling register-scalable-target \`
- >`   --service-namespace ecs \`
- `   --scalable-dimension ecs:service:DesiredCount \`
-  >`  --resource-id service/lab-cluster/frontend-service-fxgjjv \`
-`  --min-capacity 1 \`
-  >  `--max-capacity 4`
+```bash
+aws application-autoscaling register-scalable-target \
+   --service-namespace ecs \
+   --scalable-dimension ecs:service:DesiredCount \
+   --resource-id service/lab-cluster/frontend-service-fxgjjv \
+   --min-capacity 1 \
+   --max-capacity 4
+```
+> No Output recieved
 4. Configured a file for a target tracking scaling policy
 ```bash
 cat << EOF > scaling-config.json
@@ -88,7 +100,7 @@ cat << EOF > scaling-config.json
 }
 EOF
 ```
-
+> No output Recieved
 5. Created a scaling policy using command
 ```bash
 aws application-autoscaling put-scaling-policy \
@@ -98,7 +110,11 @@ aws application-autoscaling put-scaling-policy \
     --policy-name cpu20-target-tracking-scaling-policy --policy-type TargetTrackingScaling \
     --target-tracking-scaling-policy-configuration file://scaling-config.json
 ```
+------
+![](/Lab1/Screenshot%20from%202023-08-19%2018-35-35.png)
 6. Then I checked  the Service configuration of the fronted service group and there we can see a new policy is being created
+
+![](/Lab1/Screenshot%20from%202023-08-19%2018-38-12.png)
 
 
 
