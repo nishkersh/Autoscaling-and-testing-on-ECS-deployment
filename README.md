@@ -25,7 +25,7 @@ In combination, auto scaling and rigorous testing create a robust and reliable e
 
 Diagram of the Deployed Resources
 
-![](https://assets.cloudacademy.com/labs/uploads/ecs-autoscaling-lab/steps/2_reviewing-the-ecs-deployment/assets/ecs-demo.drawio.png)
+![](/Lab1/c85fc118-2e3.webp)
 
 ![](/Lab1/Screenshot%20from%202023-08-21%2002-30-59.png)
 ---
