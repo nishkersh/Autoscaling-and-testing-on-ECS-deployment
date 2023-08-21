@@ -27,8 +27,8 @@ Diagram of the Deployed Resources
 
 ![](https://assets.cloudacademy.com/labs/uploads/ecs-autoscaling-lab/steps/2_reviewing-the-ecs-deployment/assets/ecs-demo.drawio.png)
 
----
-![](https://drive.google.com/file/d/1ZfXKYTMqM12UmRH54Wnp1bymYc_DScS2/view?usp=drive_link)
+>
+![](![](https://github.com/nishkersh/Autoscaling-and-testing-on-ECS-deployment/blob/main/Lab1/Screenshot%20from%202023-08-21%2002-30-59.png))
 ---
 Therefore through this lab I will be explaining how to use Application Auto Scaling to scale the frontend service in response to high CPU utilization.
 
